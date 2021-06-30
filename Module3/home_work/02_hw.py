@@ -1,8 +1,19 @@
-# Напишите алгоритм, заполняющий список произвольными целыми числами
-# в диапазоне от -100 до 100. В списке должно быть n - элементов.
-# Подсказка:
-# для получения случайного числа используйте функцию randint() модуля random
+ans = ''
+i = 0
 import random
 numbers = []
-# print(random.randint(10, 20))  # раскомментируйте, чтобы посмотреть работу функции randint
-# TODO: your code here
+while True:
+    a = random.randint(-100, 100)
+    i += 1
+    numbers.append(a)
+    if i % 5 == 0:
+        print(numbers)
+        print('Продолжить?')
+        ans = input('Ответ: ')
+
+    if ans == 'нет':
+        break
+
+print()
+print()
+print(numbers)
