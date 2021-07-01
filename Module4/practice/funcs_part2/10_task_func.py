@@ -1,9 +1,13 @@
-# Напишите функцию, находящую среднее арифметическое всех аргументов
-# Функция должна вызываться с любым количеством аргументов
-
 def average(*args):
-    # TODO: your code here
-    pass
+    a = 0
+    k = 0
+    for i in args:
+        k = i + k
+        a += 1
+    q = k / a
+    return q
+
+
 
 
 print(average(3, 4, 8))
