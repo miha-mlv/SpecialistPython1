@@ -1,7 +1,11 @@
-# Является ли палиндромом?
-# Напишите функцию, проверяющую является ли число палиндромом.
-# палиндром - число одинаково читающееся слева направо, так и справа налево.
-#  Пример палиндрома: 12321
-
 def palindrome(number):
-    pass
+    b = ''
+    for i in str(number):
+        b = i + b
+    if int(b) == number:
+        return str(number) + " - является"
+    else:
+        return str(number) + " - не является"
+
+number = int(input('number = '))
+print(palindrome(number))
