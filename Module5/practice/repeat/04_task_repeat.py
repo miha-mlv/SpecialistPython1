@@ -1,10 +1,12 @@
-# Напишите функцию принимающую общее количество объектов(например, товаров)
-# которые нужно отобразить и количество объектов, которые нужно отобразить на каждой странице.
-# Функция должна вычислять количество страниц для отображения всех объектов.
-
-# Под пагинацией понимают показ ограниченной части информации на одной
-# веб-странице и вывода списка остальных страниц.
-
 def pagination(num_items, items_on_page):
-    pass
+    a = num_items / items_on_page
+    b = num_items % items_on_page
+    if b == 0:
+        return a
+    else:
+        c = math.ceil(a)
+        return c
 
+num_items = int(input('num_items = '))
+items_on_page = int(input("items_on_page = "))
+print(pagination(num_items, items_on_page))
